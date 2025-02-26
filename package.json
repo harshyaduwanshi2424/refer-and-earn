@@ -1,36 +1,16 @@
 {
-  "name": "refer-and-earn-page",
+  "name": "refer-and-earn",
   "version": "1.0.0",
-  "description": "MERN Stack Refer & Earn Program",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
-    "client": "cd client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "seed": "node server/scripts/seedData.js",
-    "install-all": "npm install && cd client && npm install",
-    "build": "cd client && npm run build",
-    "test": "cd client && npm test",
-    "eject": "cd client && npm run eject"
+  "engines": {
+    "node": ">=16.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "axios": "^0.21.4",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^6.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.6",
-    "nodemon": "^2.0.12",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "install": "npm run install-client && npm run install-server",
+    "build": "cd client && npm run build",
+    "start-client": "cd client && npm start",
+    "start-server": "cd server && node server.js",
+    "start": "npm run start-server"
   }
 }
